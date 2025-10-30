@@ -1,0 +1,300 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.calculator {
+    padding: 30px;
+}
+
+.input-section h2,
+.result-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group .unit {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input {
+    padding-right: 50px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    flex: 1;
+    justify-content: center;
+}
+
+.radio-label:hover {
+    border-color: #667eea;
+}
+
+.radio-label input[type="radio"] {
+    margin-right: 8px;
+    width: auto;
+    padding: 0;
+}
+
+.radio-label input[type="radio"]:checked + span {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.radio-label:has(input:checked) {
+    border-color: #667eea;
+    background-color: rgba(102, 126, 234, 0.05);
+}
+
+.calculate-btn,
+.recalculate-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.recalculate-btn {
+    background: #f8f9fa;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.recalculate-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+.result-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.bmr-value {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.bmr-value .unit {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+.result-description {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.explanation {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.explanation h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.explanation p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.explanation ul {
+    margin-left: 20px;
+    color: #666;
+}
+
+.explanation li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+footer {
+    background: #f8f9fa;
+    padding: 20px 30px;
+    border-top: 1px solid #e1e5e9;
+}
+
+footer p {
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+    }
+    
+    header {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+    
+    .calculator {
+        padding: 20px;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .bmr-value {
+        font-size: 36px;
+    }
+    
+    .explanation {
+        padding: 20px;
+    }
+}
+
+/* 输入验证样式 */
+.form-group input:invalid {
+    border-color: #ff6b6b;
+}
+
+.form-group input:valid {
+    border-color: #51cf66;
+}
+
+.form-group input:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
